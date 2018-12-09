@@ -1,6 +1,6 @@
 package alexpolkin.ru;
 
-public class main {
+public class Main {
 
     public static void main(String argv[]){
         Car car = new Car("car engine");
