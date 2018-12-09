@@ -2,7 +2,8 @@ package alexpolkin.ru;
 
 public class Singleton {
 
-    private static Singleton single = new Singleton();
+    private static final Object sync = new Object();
+    private static volatile Singleton single = null;
 
     private Singleton() {
     }
@@ -13,9 +14,12 @@ public class Singleton {
 
     public static Singleton getInstance(){
         if (single == null) {
-            return new Singleton();
-        }else{
-            return single;
+            synchronized (sync){
+                if (single == null){
+                    single = new Singleton();
+                }
+            }
         }
+        return single;
     }
 }
