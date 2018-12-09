@@ -7,7 +7,7 @@ public class Main {
 
         Iterator iterator = concreteAggregate.getIterator();
 
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
     }

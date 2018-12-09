@@ -10,7 +10,7 @@ public class HealthMan implements Observed {
 
     List<Observer> observers = new ArrayList<>();
 
-    public void setHealth(int temp, int pressure){
+    public void setHealth(int temp, int pressure) {
         this.temp = temp;
         this.pressure = pressure;
         notifyObserver();
@@ -28,7 +28,7 @@ public class HealthMan implements Observed {
 
     @Override
     public void notifyObserver() {
-        for (Observer observer : observers){
+        for (Observer observer : observers) {
             observer.handleEvent(temp, pressure);
         }
     }

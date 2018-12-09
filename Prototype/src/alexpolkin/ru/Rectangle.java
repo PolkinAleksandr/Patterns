@@ -1,15 +1,16 @@
 package alexpolkin.ru;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape {
 
     public int width;
     public int height;
 
-    public Rectangle(){}
+    public Rectangle() {
+    }
 
     public Rectangle(Rectangle rectangle) {
         super(rectangle);
-        if(rectangle != null){
+        if (rectangle != null) {
             this.width = rectangle.width;
             this.height = rectangle.height;
         }
